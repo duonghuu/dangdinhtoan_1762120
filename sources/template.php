@@ -1,17 +1,23 @@
 <?php 
 if($source=="index"){
-  $tieuchi = get_result("select id,ten$lang as ten,mota$lang as mota,thumb,photo from #_news
+  $ytuong = get_result("select id,ten$lang as ten,thumb,photo,tenkhongdau,type from #_news
+   where type='y-tuong' and noibat>0 and hienthi>0 order by stt limit 0,7");
+  $tieuchi = get_result("select id,ten$lang as ten,link,thumb,photo,type from #_news
   where type='tieu-chi' and hienthi>0 order by stt asc");
   $product_danhmucnb = get_result("select id,ten$lang as ten,tenkhongdau,type,thumb,photo from #_product_danhmuc
    where type='san-pham' and noibat>0 and hienthi>0 order by stt");
   $quangcao = get_result("select ten$lang as ten,photo,thumb,link from #_slider 
    where hienthi=1 and type='quang-cao' order by stt");
+  $quangcao2 = get_result("select ten$lang as ten,photo,thumb,link from #_slider 
+   where hienthi=1 and type='quang-cao2' order by stt");
   $tinnb = get_result("select id,ten$lang as ten,mota$lang as mota,thumb,photo,tenkhongdau,ngaytao,type from #_news
-   where type='tin-tuc' and noibat>0 and hienthi>0 order by stt limit 0,6");
+   where type='tin-tuc' and noibat>0 and hienthi>0 order by stt");
+  $dongsonkhac = get_result("select id,ten$lang as ten,mota$lang as mota,thumb,photo,tenkhongdau,ngaytao,type,link from #_news
+   where type='dong-son-khac' and hienthi>0 order by stt");
   // $video=get_result("select id,ten$lang as ten,tenkhongdau,link,thumb,photo
   //  from #_video where hienthi=1 and type='video' order by stt");
 }
-$product_danhmuc = get_result("select id,ten$lang as ten,tenkhongdau,type from #_product_danhmuc
+$product_danhmuc = get_result("select id,ten$lang as ten,mota$lang as mota,thumb,photo,tenkhongdau,type from #_product_danhmuc
  where type='san-pham' and hienthi>0 order by stt");
   
 $logolang = get_fetch("select photo$lang as photo from #_background where type='logo'");

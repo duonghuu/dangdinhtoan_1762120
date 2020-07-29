@@ -19,15 +19,10 @@
   }
 }
 .sec-slider{
-    background-color: #f2f2f2;
-    padding: 10px 0;
     .slider__wrap{
-        @include grid(flex, $flex-wrap: wrap, $justify-content: space-between, 
-          $align-items: null, $gutter: null);
     }
 }
 #slideshow {
-    width: percentage(920/$max-width);
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -50,7 +45,7 @@
                 .slider-link{
                     display: block;
                     position: relative;
-                    padding-top: percentage(420/920);
+                    padding-top: percentage(500/1366);
                     img {
                         @extend %img-fill;
                     }

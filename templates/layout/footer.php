@@ -1,34 +1,28 @@
-<div class="newsletter">
-  <div class="container">
-    <div class="newsletter__wrap">
-      <div class="newsletter__left">
-      <div class="newsletter__title">đăng ký nhận tin từ <strong>dannystore</strong></div>
-      <?php include _template."layout/dangkynhantin.php"; ?>
-      </div>
-      <div class="mxh"><?= lay_mxh('mxh') ?></div>   
-    </div>
-  </div>
-</div>
-<footer id="footer" class="ft lazy" data-bg="url('images/ft-bg.jpg')">
-  <div class="ft-top ">
-    <div class="container">
-      <div class="ft-flex">
-        <div class="ft-info">
-          <?php /* 
-          <h2 class="ft-company"><a href=""><?= $company["ten"] ?></a></h2>  
-          */?>
-          <div class="content"><?php echo lay_text('footer'); ?></div>  
-          <?php /* 
-          <div class="mxh mxh--ft"><span>Mạng xã hội:</span><?= lay_mxh('mxhft') ?></div>   
-          */?>
-        </div>
-
+<footer id="footer" class="ft">
+    <div class="container d-flex">
         <div class="ft-baiviet">
-          <p class="ft-tit">Chính sách - quy định</p> 
+          <p class="ft-tit">Về chúng tôi</p> 
           <?= for1('news','chinh-sach','chinh-sach','.html')?>
+        </div>
+        <div class="ft-baiviet">
+          <p class="ft-tit">các trang khác</p> 
+          <?= for1('news','chinh-sach','chinh-sach','.html')?>
+        </div>
+        <div class="ft-baiviet">
+          <p class="ft-tit"><?= _lienhe ?></p> 
+          <?= for1('news','chinh-sach','chinh-sach','.html')?>
+        </div>
+        <div class="ft-ytuong">
+          <p class="ft-tit">gửi ý tưởng của bạn</p> 
+          <form action="">
+            <input type="text" placeholder="<?= _hovaten ?>" name="" class="form-control">
+            <input type="text" placeholder="<?= _noidung ?>" name="" class="form-control">
+            <button type="submit" class="btn btn-primary">Gửi</button>
+          </form>
         </div>
 
         
+        <?php /* 
         <?php  //if($deviceType != "phone"){ ?>
           <div class="ft-fanpage">
             <p class="ft-tit">fanpage - Facebook</p> 
@@ -45,11 +39,8 @@
           </div>
         </div>
       <?php //} ?>   
-        <?php /* 
          */?> 
-      </div>
     </div>
-  </div> 
   <div class="copyright">
     <div class="container">
       <div class="ft-wrap">

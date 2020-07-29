@@ -28,13 +28,15 @@
             </li>
 
             <li class="categories_li <?php if(in_array($_GET['type'], array('tieu-chi','tuyen-dung','link-san-pham',
-            'y-kien','dich-vu','txtdich-vu','tin-tuc','txttin-tuc','chinh-sach')) 
+            'y-kien','dich-vu','txtdich-vu','tin-tuc','txttin-tuc','chinh-sach','y-tuong')) 
             or $_GET['com']=='vnexpress') 
             echo ' activemenu' ?>" id="menu_tt"><a href="" title="" class="exp"><span>
             Bài viết</span><strong></strong></a>
             <ul class="sub">
                 <?php phanquyen_menu('Tiêu chí','news','man','tieu-chi'); ?>
+                <?php phanquyen_menu('Ý tưởng','news','man','y-tuong'); ?>
                 <?php phanquyen_menu('Tin tức','news','man','tin-tuc'); ?>
+                <?php phanquyen_menu('Những dòng sơn khác','news','man','dong-son-khac'); ?>
                 <?php phanquyen_menu('Chính sách','news','man','chinh-sach'); ?>
                 <?php //phanquyen_menu('Lấy tin từ Vnexpress','vnexpress','man',''); ?>
             </ul>
@@ -78,6 +80,7 @@
     <?php //phanquyen_menu('Cập nhật banner mobile','background','capnhat','banner_mobi'); ?>
     <?php phanquyen_menu('Quản lý slider','slider','man_photo','slider'); ?>
     <?php phanquyen_menu('Banner quảng cáo','slider','man_photo','quang-cao'); ?>
+    <?php phanquyen_menu('Chứng nhận','slider','man_photo','quang-cao2'); ?>
     <?php //phanquyen_menu('Banner trang trong','news','man','bntrong'); ?>
     <?php //phanquyen_menu('Text Đối tác','about','capnhat','txtdoitac'); ?>
     <?php //phanquyen_menu('Đối tác','slider','man_photo','doi-tac'); ?>

@@ -3,10 +3,6 @@
         $slider = get_result("select ten$lang as ten,mota$lang as mota,photo,thumb,link from #_slider 
           where hienthi=1 and type='slider' order by stt");
          ?>
-         <section class="sec-slider">
-           <div class="container">
-             <div class="slider__wrap">
-               <?php include _template."layout/menu_left.php"; ?>
                <div id="slideshow">
                  <div class="slideshow-slider-main">
                    <?php 
@@ -16,12 +12,9 @@
                      <section>
                       <a href="<?= $v["link"] ?>" class="slider-link">
                         <picture>
-                          <?php /* 
                           <source media="(min-width: 1024px)" srcset="<?= _upload_hinhanh_l.$v["thumb"] ?>" />
-                          <source media="(min-width: 550px)" srcset="thumb/768x267/1/<?= _upload_hinhanh_l.$v["thumb"] ?>" />
-                          <img src="thumb/425x150/1/<?= _upload_hinhanh_l.$v["thumb"] ?>" alt="<?= $v["ten"] ?>" />  
-                          */?>
-                          <img src="<?= _upload_hinhanh_l.$v["thumb"] ?>" alt="<?= $v["ten"] ?>" /> 
+                          <source media="(min-width: 550px)" srcset="thumb/768x281/1/<?= _upload_hinhanh_l.$v["thumb"] ?>" />
+                          <img src="thumb/425x156/1/<?= _upload_hinhanh_l.$v["thumb"] ?>" alt="<?= $v["ten"] ?>" />  
                         </picture> 
                       </a>
                           <?php /* 
@@ -44,9 +37,6 @@
                     <?php } ?>
                   </div>
              </div>
-             </div>
-           </div>
-         </section>
           <?php }else{ 
   // $bntype = $type;
   // if($type=="about") $bntype = 'gioi-thieu';

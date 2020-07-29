@@ -2,217 +2,327 @@
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
 .main-title{
-  &__name{
-    @include bg("idx-tit.jpg",$background-repeat: repeat,$background-size: null,$background-position: 0 0);
-    @include setFont(18px, #000, 900, $font-text);
-    text-transform: uppercase;
-    margin-bottom: 14px;
+  @include bg("idx-tit.png",$background-repeat: no-repeat,$background-size: null,$background-position: center bottom);
+  @include setFont(30px, #000, 700, $font-text);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  a,span{
+    color: #004a9e;
+    display: inline-block;
+  }
+  &--white{
     a,span{
-      @include grid(inline-flex, $flex-wrap: wrap, $justify-content: null, 
-        $align-items: center, $gutter: null);
-      min-height: 46px;
-      background-color: #e7090c;
       color: #fff;
-      padding: 0 15px;
+    }
+  }
+  &--black{
+    a,span{
+      color: #000;
     }
   }
   @include media("<=mobile"){
   }
 }
-.tieuchi-main{
-  margin: 10px -1em;
-}
-.tieuchi-item{
-  padding: 0 1em;
-  &__article{
-    @include grid(flex, $align-items: center);
-  }
-  &__image{
-    @include box(60px,60px);
-  }
-  &__figure{
-    position: relative;
-    padding-top: 100%;
-    &-img{
-      @extend %img-fill;
-    }
-  }
-  &__info{
-    @include flex(1);
-    margin-left: 10px;
-  }
-  &__name{
-    @include setFont(14px, #000, 700, $font-text);
-    text-transform: uppercase;
-    margin-bottom: 5px;
-  }
-  &__desc{
-    @include setFont(14px, #999, 400, $font-text);
-    margin-bottom: 0;
-  }
-}
-.sanpham-noibat{
-  &__more{
-    @include grid(inline-flex, $flex-wrap: null, $justify-content: null, 
-      $align-items: center, $gutter: null);
-    @include setFont(12px, $theme-color, 400, $font-text);
-    font-style: italic;
-    border-top: 2px solid $theme-color;
-  }
-  &__head{
-    @include grid(flex, $flex-wrap: wrap, $justify-content: space-between, 
-      $align-items: null, $gutter: null);
-    background-color: #f6f6f6;
-    position: relative;
-    margin-bottom: 10px;
-    .nav{
-      @include flex(1);
-      background-color: #f6f6f6;
-      border-top: 2px solid $theme-color;
-      padding-left: 30px;
-      &-item{
-        @include grid(inline-flex, $flex-wrap: wrap, $justify-content: space-between, 
-          $align-items: center, $gutter: null);
-        @include setFont(13px, #000, 400, $font-text);
-        text-transform: uppercase;
-        margin-left: 30px;
-        position: relative;
 
-        @include doubly(){
-          @include p-el(before, $el-width: 1px, $el-height: 12px){
-            background-color: #555;
-            left: -14px;
-          }
-        }
-      }
-      &-link{
-        padding: 0;
-        color: #333;
-      }
-    }
-  }
-  &__title{
-    @include grid(inline-flex, $flex-wrap: wrap, $justify-content: null, 
-      $align-items: null, $gutter: null);
-    @include flex(1);
-    background-color: $theme-color;
-    &-stt{
-      @include box(45px,45px);
-      @include bg("idx-tit.png",$background-repeat: no-repeat,$background-size: null,$background-position: 0 0);
-      @include grid(inline-flex, $flex-wrap: wrap, $justify-content: center, 
-        $align-items: center, $gutter: null);
-      @include setFont(13px, $theme-color, 700, "Arial");
-    }
-    &-name{
-      @include setFont(18px, #fff, 700, $font-text);
-      @include grid(inline-flex, $flex-wrap: null, $justify-content: null, 
-        $align-items: center, $gutter: null);
-      text-transform: uppercase;
-      margin-bottom: 0;
-      margin-left: 20px;
-      position: relative;
-      @include p-el(after, $el-width: 61px, $el-height: 45px){
-        @include bg("idx-tit2.png",$background-repeat: no-repeat,$background-size: cover,$background-position: 0 0);
-        right: -60px;
-
-      }
-    }
-    &-url{
-      color: #fff;
-
-      &:hover{
-        color: #fff;
-
-      }
-    }
-  }
-  &__body{
-      @include grid(flex, $flex-wrap: wrap, $justify-content: space-between, 
-        $align-items: null, $gutter: null);
-  }
-  &__image{
-    width: percentage(350/$max-width);
-  }
-  &__figure{
-    position: relative;
-    padding-top: percentage(590/350);
-    margin-bottom: 0;
-    &-img{
-      @extend %img-fill;
-    }
-  }
-  &__products{
-    $products-gutter: percentage(7/840);
-    width: percentage(840/$max-width);
-    .product-grid{
-      @include grid($display: flex, $flex-wrap:wrap, $gutter:$products-gutter);
-    }
-    .pr-box{
-      @include grid-col($col: 4, $grid-columns:12, $gutter:$products-gutter);
-      margin-bottom: 15px;
-    }
-  }
-}
-.quangcao-main{
-  margin: 0 -1em;
-}
-.quangcao-item{
-  padding: 0 1em;
-  &__url{
-    display: block;
-  }
-  &__figure{
-    position: relative;
-    padding-top: percentage(210/590);
-    &-img{
-      @extend %img-fill;
-    }
-  }
-}
-.tintuc-noibat{
-  padding: 30px 0;
-  &__title{
-    @include setFont(25px, $theme-color, 400, $font-oswald);
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 0;
-  }
-  &__desc{
-    @include setFont(14px, #000, 400, $font-text);
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  .tinnb-main{
+.tieuchi{
+  background-color: #fff;
+  padding: 20px 0;
+  &-main{
     margin: 0 -1em;
   }
-  .tinnb-item{
+  &-item{
     padding: 0 1em;
     &__url{
-      display: block;
+      @include grid(flex, $flex-wrap: wrap, $justify-content: null, 
+        $align-items: center, $gutter: null);
+    }
+    &__image{
+      width: percentage(90/276);
+    }
+    &__figure{
+      padding-top: 100%;
+      background-size: contain;
+      background-position: center center;
+      margin-bottom: 0;
+    }
+    &__info{
+      margin-left: 10px;
+      &-text{
+        @include setFont(14px, #393939, 400, $font-text);
+        margin-bottom: 0;
+        line-height: 1;
+      }
+      &-text--big{
+        @include setFont(40px, #393939, 400, $font-text);
+        position: relative;
+        display: inline-block;
+        padding: 7px 0;
+        @include p-el(before, $el-width: 20px, $el-height: 3px){
+          background-color: #393939;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+.danhmuc-sanpham{
+  padding: 50px 0;
+  &-list{}
+  &-item{
+    @include grid(flex, $flex-wrap: wrap, $justify-content: space-between, 
+      $align-items: center, $gutter: null);
+    min-height: 335px;
+    position: relative;
+    &__image{
+      width: percentage(604/$max-width);
     }
     &__figure{
       position: relative;
-      padding-top: percentage(290/375);
-      margin-bottom: 0;
-      &-img{
-        @extend %img-fill;
-      }
+      padding-top: percentage(335/605);
+      background-size: cover;
     }
     &__info{
-      padding: 10px;
+      @include absolute($right: 0px);
+      width: percentage(622/$max-width);
+      background-color: #fff;
+      padding: 50px 25px;
     }
+    &__info--inner{}
     &__name{
-      @include setFont(14px, #000, 700, $font-text);
-      @include line-clamp($font-size: 14px, $line-height: 1.5, 
-        $lines-to-show: 2, $max-height: false);
-      text-transform: uppercase;
-      margin-bottom: 10px;
+      @include setFont(20px, #393939, 700, $font-text);
+      text-transform: capitalize;
+      &-url{
+        color: #393939;
+      }
     }
     &__desc{
-      @include setFont(14px, #595959, 400, $font-text);
-      @include line-clamp($font-size: 14px, $line-height: 1.5, 
-        $lines-to-show: 3, $max-height: false);
+      @include setFont(15px, #393939, 400, $font-text);
+      @include line-clamp($font-size: 15px, $line-height: 1.5, $lines-to-show: 3, $max-height: false);
       margin-bottom: 0;
     }
   }
+  &-item{
+    $this: &;
+    &--even{
+      @include justify-content(flex-end);
+      #{$this}__image{}
+      #{$this}__info{
+        right: unset;
+        left: 0;
+      }
+
+    }
+  }
+}
+.readmore-btn{
+  @include setFont(16px, #fff, 400, $font-text);
+  @include transition(all 0.2s ease);
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 15px;
+  border-radius: 5px;
+  border: 1px solid $theme-color;
+  background-color: $theme-color;
+  i{
+    margin-left: 3px;
+  }
+  &:hover{
+    border-color: $theme2-color;
+    background-color: $theme2-color;
+    color: #333;
+  }
+  &--yellow{
+    border-color: $theme2-color;
+    background-color: $theme2-color;
+    color: #fff;
+  }
+}
+.ytuong{
+  $ytuong-gut: percentage(7/899);
+  padding: 50px 0;
+  .d-flex{
+    @include flex-wrap(wrap);
+    @include justify-content(space-between);
+  }
+  &-head{
+    width: percentage(295/$max-width);
+    &__box{
+      @extend %bg-full;
+      position: relative;
+      padding-top: percentage(530/295);
+    }
+    &--inner{
+      @include absolute(15px, 15px, 15px, 15px);
+      @include background-opacity(#000,0.5);
+      @include grid(flex, $flex-wrap: wrap, $justify-content: center, 
+        $align-items: center, $flex-direction: column);
+      text-align: center;
+
+    }
+    &__name{
+
+      @include setFont(40px, #fff, 700, $font-text);
+      padding: 0 7px;
+    }
+    &__readmore{
+      @include setFont(15px, #fff, 400, $font-text);
+      display: inline-block;
+      margin-top: 10px;
+      border-bottom: 1px solid #fff;
+      &:hover{
+        color: #fff;
+      }
+    }
+  }
+  &-list{
+    @include grid($display: flex, $flex-wrap:wrap, $gutter: $ytuong-gut);
+    @include flex(1);
+    margin-left: 3.5px;
+  }
+  &-item{
+    @include grid-col($col: 4, $grid-columns:12, $gutter: $ytuong-gut);
+    margin-bottom: 7px;
+    &__url{
+      display: block;
+      position: relative;
+    }
+    &__figure{
+      position: relative;
+      z-index: 1;
+      padding-top: percentage(261/295);
+      margin-bottom: 0;
+    }
+    &__info{
+      @include absolute(0px, 0px, 0px, 0px);
+      @include bg("bong.png",$background-repeat: repeat-x,$background-size: null,$background-position: 0 bottom);
+      z-index: 2;
+    }
+    &__name{
+      @include setFont(16px, #fff, 400, $font-text);
+      @include absolute($left: 0px, $bottom: 10px);
+      text-transform: uppercase;
+      margin-bottom: 0;
+      text-align: center;
+      width: 100%;
+    }
+  }
+}
+.truyenthong{
+  padding: 35px 0;
+  background-size: cover;
+  .container{
+    @include grid(flex, $flex-wrap: wrap, $justify-content: space-between, 
+      $align-items: null, $gutter: null);
+  }
+  .first-news{
+    &__name{
+      @include setFont(20px, #fff, 700, $font-text);
+    }
+    &__desc{
+      @include setFont(15px, #fff, 400, $font-text);
+      @include line-clamp($font-size: 15px, $line-height: 1.5, $lines-to-show: 2, $max-height: false);
+      margin-bottom: 7px;
+    }
+    &__figure{
+
+      @extend %bg-full;
+      padding-top: percentage(250/600);
+      position: relative;
+    }
+  }
+  &-left{
+    width: percentage(600/$max-width);
+  }  
+  &-right{
+    width: percentage(550/$max-width);
+    &-item{
+      
+      &__name{
+       @include setFont(20px, #fff, 700, $font-text);
+     }
+     &__desc{
+       @include setFont(15px, #fff, 400, $font-text);
+       @include line-clamp($font-size: 15px, $line-height: 1.5, $lines-to-show: 2, $max-height: false);
+       margin-bottom: 0;
+     }
+    }
+  }  
+}
+.tinmoi-container{
+  max-height: 475px;
+  overflow:hidden;
+  position:relative;
+  >ul{
+    @extend %reset-list;
+    @include relative($top: 0px);
+    box-sizing:border-box;
+    animation:slider 9s linear infinite;
+    li{
+      @include grid(flex, 
+        $align-items: center);
+      border-bottom: 1px solid rgba(255,255,255,0.29);
+      padding: 10px 0;
+      position: relative;
+      @include p-el(after, $el-width: null, $el-height: null){
+        @include setFont(15px, #fff, 700, $font-awesome);
+        @include absolute($right: 0px);
+        content: "\f35a";
+      }
+    }
+  }
+}
+.tinmoi-container >ul:hover{
+  animation-play-state:paused;
+}
+@include keyframes(slider) {
+  0%{top:0em}
+  100%{top:-10em}
+}
+.dongsonkhac{
+  padding: 50px 0;
+  &-main{
+
+    margin: 0 -10px;
+  }
+  &-item{
+    padding: 0 10px;
+    &__url{
+    background-color: #fff;
+      display: block;
+      padding: 10px 10px 30px;
+    }
+    &__figure{
+      @extend %bg-center;
+      position: relative;
+      padding-top: percentage(310/400);
+
+    }
+    &__name{
+      @include setFont(16px, #000, 400, $font-text);
+    }
+    &__desc{
+      @include setFont(15px, #333, 400, $font-text);
+      @include line-clamp($font-size: 15px, $line-height: 1.5, $lines-to-show: 3, $max-height: false);
+    }
+  }
+}
+.newsletter-chungnhan{
+  @include grid(flex, $flex-wrap: wrap, $justify-content: space-between, 
+    $align-items: null, $gutter: null);
+ .newsletter{
+  background-size: cover;
+  width: 50%;
+  .form-control{}
+  .btn{}
+ } 
+ .chungnhan{
+  width: 50%;
+  background-size: cover;
+
+ }
+ .quangcao2-main{} 
+ .quangcao2-item{
+
+ } 
 }

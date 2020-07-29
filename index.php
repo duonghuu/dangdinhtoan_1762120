@@ -53,7 +53,7 @@ include_once _source."counter.php";
                 echo $bread->display();
             }
             ?>
-            <div class="main_content <?php if($source!="index1") echo 'container';?>">
+            <div class="main_content <?php if($source!="index") echo 'container';?>">
                 <?php if($template == 'productxx') {  ?>
                     <div class="clearfix">
                         <div class="left">
@@ -70,6 +70,9 @@ include_once _source."counter.php";
             </div><!---END .main_content-->
         </section>
         <?php 
+        if($source == "index"){
+            include _template."layout/doitac.php";
+        }
         include _template."layout/footer.php";
         ?>
     </div><!---END .wapper-->
@@ -78,8 +81,8 @@ include_once _source."counter.php";
     //include _template."layout/facebook.php";
     //include _template."layout/phone.php";
     // include _template."layout/chat_facebook.php";
-    include _template."layout/cart_popup.php";
-    include _template."layout/phone3.php";
+    // include _template."layout/cart_popup.php";
+    // include _template."layout/phone3.php";
     include _template."layout/phone2.php";
     // include _template."layout/phone5.php";
 }else{

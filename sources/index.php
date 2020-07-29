@@ -21,10 +21,10 @@ if(!empty($_POST["nltval"])){
           if ($recaptcha->success == true) { 
             $data = $_POST["fid"];
             $email_nhantin = $data['email_nhantin'];       
-            $dienthoai_nhantin = $data['dienthoai'];       
+            $dienthoai_nhantin = $data['dienthoai_nhantin'];       
             $diachi_nhantin = $data['diachi'];       
-            $ten_nhantin = $data['ten'];       
-            $noidung_nhantin = $data['noidung'];       
+            $ten_nhantin = $data['hoten_nhantin'];       
+            $noidung_nhantin = $data['noidung_nhantin'];       
             $d->reset();
             $sql_kt_mail="SELECT email FROM table_newsletter WHERE email='".$email_nhantin."'";
             $d->query($sql_kt_mail);

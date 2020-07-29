@@ -201,7 +201,7 @@ div#wapper {
     z-index: 1;
     width: 100%;
     overflow: hidden;
-    background-color: #fff;
+    background-color: #f8f8f8;
 }
 
 div#lang {
@@ -328,17 +328,14 @@ div.main_content {
     margin: em(30) auto;
     overflow: hidden;
     @at-root .clstrangchu #{&},.clsindex #{&} {
+        margin: 0 auto;
     }
 
     div.left {
-        width: percentage(240/$max-width);
-        z-index: 50;
-        float: left;
+        // width: percentage(240/$max-width);
+        // z-index: 50;
+        // float: left;
 
-    }
-    div.right {
-        float: right;
-        width: percentage(240/$max-width);
     }
 }
 .container {

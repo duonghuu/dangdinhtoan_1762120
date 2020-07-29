@@ -17,18 +17,18 @@ switch($type){
 	case 'san-pham':
 	switch($act){
 		case 'danhmuc':
-		$config['type'] = array('ten','seo','noibat','hinhanh');
-		$config['title'] = array('noibat'=>"Nổi bật",'tieubieu'=>"Hiện menu",'hinhanh2'=>"Icon");
-		@define ( _width_thumb , 350 );
-		@define ( _height_thumb , 590 );
+		$config['type'] = array('ten','seo','mota','hinhanh','hinhanh2');
+		$config['title'] = array('noibat'=>"Nổi bật",'tieubieu'=>"Hiện menu",'hinhanh2'=>"Banner trang trong");
+		@define ( _width_thumb , 605 );
+		@define ( _height_thumb , 335 );
 		@define ( _style_thumb , 1 );
-		@define ( _width_thumb2 , 350 );
-		@define ( _height_thumb2 , 590 );
-		@define ( _widthhinhanh_thumb , 40 );
-		@define ( _heighthinhanh_thumb , 40 );
+		@define ( _width_thumb2 , 605 );
+		@define ( _height_thumb2 , 335 );
+		@define ( _widthhinhanh_thumb , 1366 );
+		@define ( _heighthinhanh_thumb , 260 );
 		@define ( _stylehinhanh_thumb , 2 );
-		@define ( _widthhinhanh_thumb2 , 40 );
-		@define ( _heighthinhanh_thumb2 , 40 );
+		@define ( _widthhinhanh_thumb2 , 1366 );
+		@define ( _heighthinhanh_thumb2 , 260 );
 		break;
 
 		case 'list':
@@ -157,11 +157,11 @@ switch($type){
 		if($type == "tin-tuc"){
 			$config['type'][] = 'noibat';
 		}
-		@define ( _width_thumb , 375 );
-		@define ( _height_thumb , 290 );
-		@define ( _style_thumb , 1 );
-		@define ( _width_thumb2 , 375);
-		@define ( _height_thumb2 , 290 );
+		@define ( _width_thumb , 600 );
+		@define ( _height_thumb , 400 );
+		@define ( _style_thumb , 2 );
+		@define ( _width_thumb2 , 600);
+		@define ( _height_thumb2 , 400 );
 		break;
 	}
 	break;
@@ -173,15 +173,40 @@ switch($type){
 		break;
 	}
 	break;
+	case 'dong-son-khac':
+	switch($act){
+		default:
+		$config['type'] = array('ten','link','hinhanh','mota');
+		@define ( _width_thumb , 400 );
+		@define ( _height_thumb , 310 );
+		@define ( _style_thumb , 2 );
+		@define ( _width_thumb2 , 400);
+		@define ( _height_thumb2 , 310 );
+		break;
+	}
+	break;
+	case 'y-tuong':
+	switch($act){
+		default:
+		$config['type'] = array('ten','seo','hinhanh','noidung','noibat');
+		@define ( _width_thumb , 300 );
+		@define ( _height_thumb , 265 );
+		@define ( _style_thumb , 2 );
+		@define ( _width_thumb2 , 300);
+		@define ( _height_thumb2 , 265 );
+		break;
+	}
+	break;
 	case 'tieu-chi':
 	switch($act){
 		default:
-		$config['type'] = array('ten','mota','hinhanh');
-		@define ( _width_thumb , 60 );
-		@define ( _height_thumb , 60 );
+		$config['type'] = array('ten','link','hinhanh','noidung');
+		$config['title'] = array('link'=>'Số liệu');
+		@define ( _width_thumb , 90 );
+		@define ( _height_thumb , 90 );
 		@define ( _style_thumb , 2 );
-		@define ( _width_thumb2 , 60);
-		@define ( _height_thumb2 , 60 );
+		@define ( _width_thumb2 , 90);
+		@define ( _height_thumb2 , 90 );
 		break;
 	}
 	break;
@@ -311,10 +336,10 @@ switch($type){
 		// $config['type'] = array('ten','mota');
 		$config['title'] = array('mota'=>'Tiêu đề nhỏ');
 		@define ( _width_thumb , 190 );
-		@define ( _height_thumb , 95);
+		@define ( _height_thumb , 60);
 		@define ( _style_thumb , 2 );
 		@define ( _width_thumb2 , 190 );
-		@define ( _height_thumb2 , 95 );
+		@define ( _height_thumb2 , 60 );
 		break;
 	}
 	break;
@@ -385,11 +410,11 @@ switch($type){
 	case 'slider':
 	switch($act){
 		default:
-		@define ( _width_thumb , 920 );
-		@define ( _height_thumb , 420);
-		@define ( _style_thumb , 1 );
-		@define ( _width_thumb2 , 920 );
-		@define ( _height_thumb2 , 420);
+		@define ( _width_thumb , 1366 );
+		@define ( _height_thumb , 500);
+		@define ( _style_thumb , 2 );
+		@define ( _width_thumb2 , 1366 );
+		@define ( _height_thumb2 , 500);
 		break;
 	}
 	break;
@@ -440,11 +465,11 @@ switch($type){
 	case 'quang-cao2':
 	switch($act){
 		default:
-		@define ( _width_thumb , 350 );
-		@define ( _height_thumb , 560 );
-		@define ( _style_thumb , 1 );
-		@define ( _width_thumb2 , 350 );
-		@define ( _height_thumb2 , 560 );
+		@define ( _width_thumb , 400 );
+		@define ( _height_thumb , 600 );
+		@define ( _style_thumb , 2 );
+		@define ( _width_thumb2 , 400 );
+		@define ( _height_thumb2 , 600 );
 		break;
 	}
 	break;

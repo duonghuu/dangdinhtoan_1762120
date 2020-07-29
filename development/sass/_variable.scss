@@ -39,29 +39,30 @@ $font-quicksand                         : 'Quicksand', sans-serif;
 $font-lora                              : 'Lora', serif;
 
 
-$font-title             : $font-muli;
-$font-text              : $font-muli;
+$font-title             : $font-montserrat;
+$font-text              : $font-montserrat;
 $font-awesome           : 'Font Awesome 5 Free';
 $font-second            : 'Arial';
 $product-ratio          : percentage(4/6);
 $product-gutter         : percentage(20/$max-width);
+$theme-color            : #004a9e;
+$theme2-color           : #ffc708;
+$map-height             : 410 * 1px;
 /* ======================== HEADER ======================== */
-$header_top-bg          : #f2f2f2;
+$header_top-bg          : #f9f9f9;
 $header-bg              : #fff;
 $breadcrumb-bg          : #f7f6f6;
 /* ======================== MENU ======================== */
-$font-menu              : $font-muli;
-$menu_item_hover-color  : #f80109;
+$font-menu              : $font-montserrat;
+$menu_item_hover-color  : #004a9e;
 $menu-bg                : #d4bc7d;
-$valak-bg               : #d4bc7d;
+$valak-bg               : #004a9e;
 $menu_item-bg           : transparent;
 $menu_item_hover-bg     : #ffb400; 
 /* ======================== FOOTER ======================== */
 $copyright-bg       : #8e0000;
-$footer-bg          : #d70707;
-$theme-color        : #d70707;
-$theme2-color        : #f2f2f2;
-$map-height         : 410 * 1px;
+$footer-bg          : #004a9e;
+
 /* ======================== URL ======================== */
 $font-url           : 'css/fonts/';
 $font-awesome-url   : 'css/fontawesome/webfonts/';
