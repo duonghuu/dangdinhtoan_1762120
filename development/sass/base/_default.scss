@@ -19,15 +19,14 @@
 }
 
 .contact-flex {
-    // @include grid($display: flex, $justify-content: space-between, $flex-wrap: wrap);
-    display: block;
+    @include grid($display: flex, $justify-content: space-between, $flex-wrap: wrap);
 }
 .tt_lh {
-    // width: 49%;
+    width: 49%;
 }
 
 .bando {
-    // width: 49%;
+    width: 49%;
 }
 
 .bando iframe {

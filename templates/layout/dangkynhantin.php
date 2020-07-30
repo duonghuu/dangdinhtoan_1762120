@@ -31,19 +31,25 @@
 
 <div id="dknt">
     <form name="frm_dknt" id="frm_dknt" method="post" autocomplete="false" action="" >
-    	 <input type="text" name="fid[hoten_nhantin]" id="hoten_nhantin" class="placeholder-2 form-control" 
+    	 <input type="text" name="fid[hoten_nhantin]" id="hoten_nhantin" 
+       class="placeholder-2 form-control" 
         placeholder="<?=_hovaten?>" />
-        <input type="text" name="fid[dienthoai_nhantin]" id="dienthoai_nhantin" class="placeholder-2 form-control" 
+        <input type="text" name="fid[dienthoai_nhantin]" id="dienthoai_nhantin" 
+        class="placeholder-2 form-control" 
             placeholder="<?=_dienthoai?>" />
-        <input type="text" name="fid[email_nhantin]" id="email_nhantin" class="placeholder-2 form-control" 
+        <input type="text" name="fid[email_nhantin]" id="email_nhantin" 
+        class="placeholder-2 form-control" 
         placeholder="<?=_nhapemailcuaban?>" />
-        <textarea name="fid[noidung_nhantin]" class="placeholder-2 form-control" placeholder="<?=_noidung?>" ></textarea>
+        <textarea name="fid[noidung_nhantin]" class="placeholder-2 form-control" 
+        placeholder="<?=_noidung?>" ></textarea>
         <input type="hidden" value="1" name="nltval">
         <input type="hidden" value="<?= time() ?>" name="nlttoken">
         <input type="hidden" name="recaptchaResponse_dknt" id="recaptchaResponse_dknt">
-        <div id="submit_nhantin"><?php /* 
+        <div class="text-center">
+        <div id="submit_nhantin" class="readmore-btn readmore-btn--yellow"><?php /* 
         <i class="fas fa-paper-plane"></i> 
-        */?>Gửi</div>
+        */?>Gửi <i class="fas fa-home"></i></div>
+        </div>
     </form>
 </div>
 

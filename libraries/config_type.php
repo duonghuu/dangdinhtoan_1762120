@@ -49,18 +49,18 @@ switch($type){
 		break;
 
 		default:
-		$config['type'] = array('seo','ten','hinhanh','noidung',"noibat",'danhmuc','list'
-			,'gia','giakm','tieubieu','noibat','spmoi','spbanchay',"mota2");
+		$config['type'] = array('seo','ten','hinhanh','noidung','danhmuc','mattien',"dientich",
+			"vitri");
 		$config['ck'] = array('mota2');
 		$config['title'] = array('tieubieu'=>"Khuyến mãi",'noibat'=>"Nổi bật",
 			'spmoi'=>"Mới nhất",'spbanchay'=>"Bán chạy","toado"=>"Iframe google map",
-			"mota2"=>"Thông số",'mattien'=>"Phòng ngủ","dientich"=>"Diện tích","thuonghieu"=>"Thương hiệu",
-			"vitri"=>"Giá bằng chữ");
-		@define ( _width_thumb , 600 );
-		@define ( _height_thumb , 400 );
+			"mota2"=>"Thông số",'mattien'=>"Dòng mô tả 2","dientich"=>"Dòng mô tả 1","thuonghieu"=>"Thương hiệu",
+			"vitri"=>"Dòng mô tả 3");
+		@define ( _width_thumb , 500 );
+		@define ( _height_thumb , 500 );
 		@define ( _style_thumb , 2 );
-		@define ( _width_thumb2 , 600 );
-		@define ( _height_thumb2 , 400 );
+		@define ( _width_thumb2 , 500 );
+		@define ( _height_thumb2 , 500 );
 		break;
 	}
 	break;
@@ -444,21 +444,21 @@ switch($type){
 	switch($act){
 		default:
 		@define ( _width_thumb , 200 );
-		@define ( _height_thumb , 130 );
+		@define ( _height_thumb , 100 );
 		@define ( _style_thumb , 2 );
 		@define ( _width_thumb2 , 200 );
-		@define ( _height_thumb2 , 130 );
+		@define ( _height_thumb2 , 100 );
 		break;
 	}
 	break;
 	case 'quang-cao':
 	switch($act){
 		default:
-		@define ( _width_thumb , 590 );
-		@define ( _height_thumb , 210 );
+		@define ( _width_thumb , 1366 );
+		@define ( _height_thumb , 550 );
 		@define ( _style_thumb , 1 );
-		@define ( _width_thumb2 , 590 );
-		@define ( _height_thumb2 , 210 );
+		@define ( _width_thumb2 , 1366 );
+		@define ( _height_thumb2 , 550 );
 		break;
 	}
 	break;
@@ -470,6 +470,17 @@ switch($type){
 		@define ( _style_thumb , 2 );
 		@define ( _width_thumb2 , 400 );
 		@define ( _height_thumb2 , 600 );
+		break;
+	}
+	break;
+	case 'trang-khac':
+	switch($act){
+		default:
+		@define ( _width_thumb , 190 );
+		@define ( _height_thumb , 60);
+		@define ( _style_thumb , 3 );
+		@define ( _width_thumb2 , 190 );
+		@define ( _height_thumb2 , 60);
 		break;
 	}
 	break;

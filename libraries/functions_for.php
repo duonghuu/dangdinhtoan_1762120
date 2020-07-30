@@ -312,19 +312,19 @@ function lay_slider($type,$class='',$width=0,$height=0,$zc=2){
 	function showProduct($v,$options=array(),$k=null){
 		global $lang,$company,$com;
 		$link = get_url($v, $v["type"]);
-		$giaspgiam = ($v["giakm"]>0)?'<span class="giam">-'.tinh_phantram($v["gia"],$v["giakm"]).
-		'%</span>':"";
+		// $giaspgiam = ($v["giakm"]>0)?'<span class="giam">-'.tinh_phantram($v["gia"],$v["giakm"]).
+		// '%</span>':"";
 		// $cls_moi = ($v["spmoi"]>0)?'<i class="new">new</i>':"";
 		// $cls_banchay = ($v["spbanchay"]>0)?'<i class="sale"></i>':"";
-		$giasp = ($v["giakm"]>0)?$v["giakm"]:$v["gia"];
-		$gia = ($giasp>0)?num_format($giasp).' vnđ':_lienhe;
-		$s_gia = "";
-		if($v["giakm"]>0) {
-			$s_gia .= '<del>'.num_format($v["gia"]).' vnđ</del>';
-			$s_gia .= '<span>'.num_format($v["giakm"]).' vnđ</span>';
-		}else{
-			$s_gia .= '<span>'.$gia.'</span>';
-		}
+		// $giasp = ($v["giakm"]>0)?$v["giakm"]:$v["gia"];
+		// $gia = ($giasp>0)?num_format($giasp).' vnđ':_lienhe;
+		// $s_gia = "";
+		// if($v["giakm"]>0) {
+		// 	$s_gia .= '<del>'.num_format($v["gia"]).' vnđ</del>';
+		// 	$s_gia .= '<span>'.num_format($v["giakm"]).' vnđ</span>';
+		// }else{
+		// 	$s_gia .= '<span>'.$gia.'</span>';
+		// }
 		// $danhgiasao = get_result("select ROUND(AVG(giatri)) as giatri FROM #_danhgiasao 
 		// where id_sanpham='".$v["id"]."' order by time desc");
 		// if($danhgiasao[0]['giatri']==0){$num_danhgiasao=0;}
@@ -356,15 +356,29 @@ function lay_slider($type,$class='',$width=0,$height=0,$zc=2){
 		// <i class="fas fa-shopping-cart"></i> Đặt hàng</a>';
 		// $linkct = '<a href="#" data-id="'.$v["id"].'" class="muangay">
 		// Đặt hàng</a>';
+		// spmoi'=>"Mới nhất",'spbanchay'=>"Bán chạy","toado"=>"Iframe google map",
+		// 			"mota2"=>"Thông số",'mattien'=>"Dòng mô tả 2","dientich"=>"Dòng mô tả 1","thuonghieu"=>"Thương hiệu",
+		// 			"vitri"=>"Dòng mô tả 3");
+		$s_dong  = "";
+		if(!empty($v["dientich"]))	{
+			$s_dong  .= '<p>'.$v["dientich"].'</p>';
+		}
+		if(!empty($v["mattien"]))	{
+			$s_dong  .= '<p>'.$v["mattien"].'</p>';
+		}
+		if(!empty($v["vitri"]))	{
+			$s_dong  .= '<p>'.$v["vitri"].'</p>';
+		}
 		echo $slickdiv.'<div class="pr-box name '.$wowclass.'" >
 		<article>
-				<a href="'.$link.'" class="imgsp">'.$imgurl.$cls_moi.$cls_banchay.
-					$giaspgiam.'
+				<a href="'.$link.'" class="imgsp"><figure>'.$imgurl.$cls_moi.$cls_banchay.
+					$giaspgiam.'</figure>
 				</a>
 				
 				<div class="info">
 					<h3><a href="'.$link.'">'.$v["ten"].'</a></h3>
-					<p>'.$s_gia.'</p>
+					'.$s_dong.'
+					<div class="text-center"><span class="readmore-btn">Xem thêm <i class="fas fa-home"></i></span></div>
 				</div>
 				'.$linkct.'
 		</article></div>'.$slickenddiv;

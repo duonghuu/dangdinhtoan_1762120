@@ -23,7 +23,36 @@
   @include media("<=mobile"){
   }
 }
-
+.quangcao-main{}
+.quangcao-item{
+ &__url{
+   display: block;
+   position: relative;
+ }
+ &__figure{
+   @extend %bg-full;
+   margin-bottom: 0;
+   position: relative;
+   padding-top: percentage(550/1366);
+ }
+ &__info{
+  @include grid(flex, 
+    $align-items: center);
+  @include absolute(0,0,0,0);
+   &--inner{
+    max-width: 470px;
+   }
+ }
+ &__name{
+  @include setFont(20px, #fff, 700, $font-text);
+  margin-bottom: 30px;
+  text-transform: uppercase;
+ }
+ &__desc{
+  @include setFont(15px, #fff, 400, $font-text);
+  @include line-clamp($font-size: 15px, $line-height: 1.5, $lines-to-show: 4, $max-height: false);
+ }
+}
 .tieuchi{
   background-color: #fff;
   padding: 20px 0;
@@ -124,6 +153,7 @@
   border-radius: 5px;
   border: 1px solid $theme-color;
   background-color: $theme-color;
+  cursor: pointer;
   i{
     margin-left: 3px;
   }
@@ -136,6 +166,11 @@
     border-color: $theme2-color;
     background-color: $theme2-color;
     color: #fff;
+  }
+  &--white{
+    border-color: #f8f8f8;
+    background-color: #f8f8f8;
+    color: #0078d4;
   }
 }
 .ytuong{
@@ -308,21 +343,70 @@
   }
 }
 .newsletter-chungnhan{
+  $padding-80: percentage(80/1366);
+  $padding-40: percentage(40/1366);
   @include grid(flex, $flex-wrap: wrap, $justify-content: space-between, 
     $align-items: null, $gutter: null);
+
  .newsletter{
+  padding: 30px $padding-40 30px $padding-80;
   background-size: cover;
   width: 50%;
   .form-control{}
   .btn{}
  } 
  .chungnhan{
+  padding: 30px $padding-80 30px $padding-40;
   width: 50%;
   background-size: cover;
 
  }
- .quangcao2-main{} 
- .quangcao2-item{
-
+ 
+ .quangcao2-main{
+  margin: 0 -15px;
  } 
+ .quangcao2-item{
+  
+  padding: 0 15px;
+  &__url{
+    display: block;
+    border: 5px solid #cf9a3f;
+    background-color: #fff;
+  }
+  &__figure{
+    @extend %bg-full;
+    margin-bottom: 0;
+    position: relative;
+    padding-top: percentage(600/400);
+
+  }
+ } 
+}
+.inner-banner{
+  @extend %bg-full;
+  position: relative;
+  padding-top: percentage(260/1366);
+}
+.product-danhmuc-links{
+  @include grid(flex, $flex-wrap: wrap, $justify-content: center, 
+    $align-items: null, $gutter: null);
+  margin: 30px 0;
+}
+.product-danhmuc-link{
+  @include setFont(20px, #393939, 700, $font-text);
+  @include transition(all 0.2s ease);
+  border-bottom: 1px solid #393939;
+  display: inline-block;
+  padding: 2px 0.5em;
+  margin-bottom: 10px;
+
+  &.active{
+    border: 1px solid $theme-color;
+    color: #fff;
+    background-color: $theme-color;
+    border-radius: 5px;
+  }
+  @include doubly(){
+    margin-left: percentage(100/$max-width);
+  }
 }

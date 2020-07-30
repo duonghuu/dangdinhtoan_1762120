@@ -49,7 +49,7 @@ include_once _source."counter.php";
             include _template."layout/valak_menu.php";
             
             include _template."layout/slider.php";
-            if($source != "index") {
+            if($source != "index" && $template != "product") {
                 echo $bread->display();
             }
             ?>

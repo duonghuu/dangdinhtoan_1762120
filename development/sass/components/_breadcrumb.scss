@@ -8,10 +8,10 @@
 	margin-bottom: 0;
 	&.breadcrumb-arrow{
 		.breadcrumb-item{
-			@include setFont(13px, #1f2022);
+			@include setFont(em(20), #1f2022, 700);
 			@include setTagAHover(#1f2022, #25aef5);
 			a{
-				@include setFont(13px, #1f2022);
+				@include setFont(em(20), #1f2022, 700);
 			}
 			&.active {
 			  color: #707070;

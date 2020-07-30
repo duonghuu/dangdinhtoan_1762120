@@ -15,11 +15,11 @@
                 <span>Sản phẩm</span><strong></strong></a>
                 <ul class="sub">
                     <?php phanquyen_menu('Danh mục cấp 1','product','man_danhmuc','san-pham'); ?>
-                    <?php phanquyen_menu('Danh mục cấp 2','product','man_list','san-pham'); ?>
+                    <?php //phanquyen_menu('Danh mục cấp 2','product','man_list','san-pham'); ?>
                     <?php //phanquyen_menu('Danh mục cấp 3','product','man_cat','san-pham'); ?>
                     <?php phanquyen_menu('Sản phẩm','product','man','san-pham'); ?>
                     <?php //phanquyen_menu('Text sản phẩm mới','about','capnhat','txtban-chay'); ?>
-                    <?php phanquyen_menu('Quản lý hình thức thanh toán','httt','man',''); ?>
+                    <?php //phanquyen_menu('Quản lý hình thức thanh toán','httt','man',''); ?>
                     <?php //phanquyen_menu('Quản lý thương hiệu','news','man','thuonghieu'); ?>
                     <?php //phanquyen_menu('Quản lý màu sắc','news','man','mausac'); ?>
                     <?php //phanquyen_menu('Quản lý size','news','man','size'); ?>
@@ -35,9 +35,9 @@
             <ul class="sub">
                 <?php phanquyen_menu('Tiêu chí','news','man','tieu-chi'); ?>
                 <?php phanquyen_menu('Ý tưởng','news','man','y-tuong'); ?>
-                <?php phanquyen_menu('Tin tức','news','man','tin-tuc'); ?>
+                <?php phanquyen_menu('Truyền thông','news','man','tin-tuc'); ?>
                 <?php phanquyen_menu('Những dòng sơn khác','news','man','dong-son-khac'); ?>
-                <?php phanquyen_menu('Chính sách','news','man','chinh-sach'); ?>
+                <?php //phanquyen_menu('Chính sách','news','man','chinh-sach'); ?>
                 <?php //phanquyen_menu('Lấy tin từ Vnexpress','vnexpress','man',''); ?>
             </ul>
         </li>
@@ -57,17 +57,17 @@
         || $_GET['com']=='yahoo') echo ' activemenu' ?>" id="menu_nt"><a href="" title="" 
         class="exp"><span>Marketing Online</span><strong></strong></a>
         <ul class="sub">
-          <?php phanquyen_menu('Mạng xã hội','lkweb','man','mxh'); ?>
+          <?php //phanquyen_menu('Mạng xã hội','lkweb','man','mxh'); ?>
           <?php phanquyen_menu('Mạng xã hội footer','lkweb','man','mxhft'); ?>
           <?php //phanquyen_menu('Hình thanh toán','lkweb','man','mxhle'); ?>
           <?php //phanquyen_menu('Quản lý liên kết web','lkweb','man','lkweb'); ?>
           <?php //phanquyen_menu('Quản lý hỗ trợ','yahoo','man','yahoo'); ?>
           <?php //phanquyen_menu('Text Đăng ký nhận tin','about','capnhat','txtnewsletter'); ?>
-          <?php phanquyen_menu('Quản lý Đăng ký nhận tin','newsletter','man',''); ?>
+          <?php //phanquyen_menu('Quản lý Đăng ký nhận tin','newsletter','man',''); ?>
       </ul>
   </li>
     <li class="categories_li gallery_li <?php if(in_array($type, array('logo','banner',
-  'bgbn','bgft','slider','slider2','slidermb','doi-tac','quang-cao','quang-cao2','slider-ma')) || $_GET['com']=='anhnen')
+  'bgbn','bgft','slider','slider2','slidermb','doi-tac','quang-cao','quang-cao2','trang-khac')) || $_GET['com']=='anhnen')
   echo ' activemenu' ?>" id="menu_qc"><a href="" title="" class="exp"><span>
   Banner - Quảng cáo</span><strong></strong></a>
   <ul class="sub">
@@ -81,9 +81,10 @@
     <?php phanquyen_menu('Quản lý slider','slider','man_photo','slider'); ?>
     <?php phanquyen_menu('Banner quảng cáo','slider','man_photo','quang-cao'); ?>
     <?php phanquyen_menu('Chứng nhận','slider','man_photo','quang-cao2'); ?>
+    <?php phanquyen_menu('Các trang khác','slider','man_photo','trang-khac'); ?>
     <?php //phanquyen_menu('Banner trang trong','news','man','bntrong'); ?>
     <?php //phanquyen_menu('Text Đối tác','about','capnhat','txtdoitac'); ?>
-    <?php //phanquyen_menu('Đối tác','slider','man_photo','doi-tac'); ?>
+    <?php phanquyen_menu('Đối tác','slider','man_photo','doi-tac'); ?>
     <?php //phanquyen_menu('Quản lý quảng cáo 2 bên','slider','man_photo','letruot'); ?>
     <?php //phanquyen_menu('Cập nhật pupop quảng cáo','background','capnhat','pupop'); ?>
 </ul>
@@ -134,8 +135,8 @@ $_GET['com']=='user') echo ' activemenu' ?>" id="menu_cp"><a href="" title="" cl
     echo ' activemenu' ?>" id="menuseo"><a href="#" title="" class="exp"><span>Hổ Trợ SEO
     </span><strong></strong></a>
     <ul class="sub">
-        <?php phanquyen_menu('Sản phẩm','title','capnhat','san-pham'); ?>
-        <?php phanquyen_menu('Tin tức','title','capnhat','tin-tuc'); ?>
+        <?php //phanquyen_menu('Sản phẩm','title','capnhat','san-pham'); ?>
+        <?php //phanquyen_menu('Tin tức','title','capnhat','tin-tuc'); ?>
     </ul>
 </li>
 </ul>

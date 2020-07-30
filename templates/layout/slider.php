@@ -1,5 +1,5 @@
       <?php 
-      if($source != "index1" ){
+      if($source == "index" ){
         $slider = get_result("select ten$lang as ten,mota$lang as mota,photo,thumb,link from #_slider 
           where hienthi=1 and type='slider' order by stt");
          ?>
@@ -38,12 +38,17 @@
                   </div>
              </div>
           <?php }else{ 
+            if($id_danhmuc>0){ 
+                $img = _upload_sanpham_l.$title_bar["thumb2"];
+              ?>
+              <div class="inner-banner" style="background-image: url('<?= $img ?>')">
+              </div>
+            <?php }
   // $bntype = $type;
   // if($type=="about") $bntype = 'gioi-thieu';
   // if($type=="thong-tin") $bntype = 'tin-tuc';
   // $bntrong=get_fetch("select ten$lang as ten,tenkhongdau,photo,thumb from #_news where type='bntrong' and ten='".$bntype."'");
-  // <div class="inner-banner" style="background-image: url(images/banner.jpg)">
-  // </div>
+  
           }
           ?>
 

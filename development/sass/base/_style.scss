@@ -201,7 +201,11 @@ div#wapper {
     z-index: 1;
     width: 100%;
     overflow: hidden;
+    background-color: #fff;
+    @include when-inside(".clsindex"){
     background-color: #f8f8f8;
+
+    }
 }
 
 div#lang {

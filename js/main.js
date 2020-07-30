@@ -370,7 +370,7 @@ $(document).ready(function() {
           lazyLoad: 'ondemand',
           infinite: false,
           accessibility: false,
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
           autoplay: js_autoplay,
           autoplaySpeed: 3000,
@@ -379,17 +379,6 @@ $(document).ready(function() {
           centerMode: false,
           dots: false,
           draggable: true,
-          responsive: [{
-              breakpoint: 830,
-              settings: {
-                  slidesToShow: 2
-              }
-          },{
-              breakpoint: 500,
-              settings: {
-                  slidesToShow: 1
-              }
-          }]
       });
   $('.doitac-main').on({
         beforeChange: function(event, slick, currentSlide, nextSlide) {

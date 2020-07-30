@@ -62,8 +62,8 @@ switch($com)
 	break;
 	case 'tin-tuc':
 	$type = "tin-tuc";
-	$title = _tintuc;
-	$title_cat = _tintuc;
+	$title = "Truyền thông";
+	$title_cat = "Truyền thông";
 	$title_other = _tinlienquan;
 	$source = "news";
 	$template = isset($_GET['id']) ? "news_detail" : "news";
@@ -78,10 +78,10 @@ switch($com)
 	$template = isset($_GET['id']) ? "news_detail" : "news";
 	$type_og = isset($_GET['id']) ? "article" : "object";
 	break;
-	case 'ky-gui':
-	$type = "ky-gui";
-	$title = "Ký gửi";
-	$title_cat = "Ký gửi";
+	case 'y-tuong':
+	$type = "y-tuong";
+	$title = "Ý tưởng";
+	$title_cat = "Ý tưởng";
 	$title_other = _tinlienquan;
 	$source = "news";
 	$template = isset($_GET['id']) ? "news_detail" : "news";
@@ -150,10 +150,10 @@ switch($com)
 	$template = "about";
 	$type_og = "article";
 	break;
-	case 'huong-dan-mua-hang':
-	$type = "huong-dan-mua-hang";
-	$title = "Hướng dẫn mua hàng";
-	$title_cat = "Hướng dẫn mua hàng";
+	case 'tim-cua-hang':
+	$type = "tim-cua-hang";
+	$title = "Tìm cửa hàng";
+	$title_cat = "Tìm cửa hàng";
 	$title_other = _tinlienquan;
 	$source = "about";
 	$template = "about";
@@ -170,7 +170,7 @@ switch($com)
 	$type = "san-pham";
 	$title = _sanpham;
 	$title_cat = _sanpham;
-	$title_other = _tinlienquan;
+	$title_other = _sanphamkhac;
 	$source = "product";
 	$template = isset($_GET['id']) ? "product_detail" : "product";
 	$type_og = isset($_GET['id']) ? "article" : "object";

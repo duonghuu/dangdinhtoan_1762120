@@ -22,16 +22,18 @@
         }
     }
     &--ft{
-        margin: 10px 0;
+        @include justify-content(center);
+        width: 100%;
+
         span{
-            @include setFont(15px, #fff, 400, $font-text);
+            // @include setFont(15px, #fff, 400, $font-text);
         }
         a{
             img{
-                height: 35px;
+                height: 42px;
             }
             @include doubly(){
-                margin-left: 6px;
+                margin-left: 12px;
             }
         }
     }

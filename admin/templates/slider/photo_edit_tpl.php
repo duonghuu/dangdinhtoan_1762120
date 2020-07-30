@@ -97,8 +97,8 @@
         </div>
         <div class="clear"></div>
       </div>
-      <?php if($type=="slider"){ ?>
-      <div class="formRow none">
+      <?php if($type=="quang-cao"){ ?>
+      <div class="formRow ">
         <label>Mô tả:</label>
         <div class="formRight">
           <textarea rows="8" cols="" title="Viết mô tả ngắn bài viết" class="tipS" name="mota<?=$key?>" id="mota<?=$key?>"><?=@$item['mota'.$key]?></textarea>

@@ -151,7 +151,7 @@ if($id>0)
 	{
 		$loc_danhmuc = $id_danhmuc;
 		$title_bar = get_fetch("select loc1,loc2,id,ten$lang as ten,type,tenkhongdau,title,keywords,description,h1,h2,h3,mota$lang
-		 as mota,noidung$lang as noidung,thumb,photo FROM #_product_danhmuc where id=".$id_danhmuc." limit 0,1");
+		 as mota,noidung$lang as noidung,thumb,photo,thumb2,photo2 FROM #_product_danhmuc where id=".$id_danhmuc." limit 0,1");
 		if(empty($title_bar)){redirect($config_url_ssl.'/404.php');}
 
 		$timkiem_id_danhmuc = $title_bar['id'];

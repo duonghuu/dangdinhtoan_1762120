@@ -54,9 +54,9 @@
    <div class="product_info">
     <div class="ten li"><?=$row_detail['ten']?></div>
     <?php 
-    if($row_detail["id_dist"]>0){
-      $get_dist = get_fetch("select ten$lang as ten from table_place_dist where id = '".$row_detail["id_dist"]."'");
-    }
+    // if($row_detail["id_dist"]>0){
+    //   $get_dist = get_fetch("select ten$lang as ten from table_place_dist where id = '".$row_detail["id_dist"]."'");
+    // }
      ?>
     <?php if($row_detail['masp'] != '') { ?>
       <div class="li"><b><?=_masanpham?>:</b><?=$row_detail['masp']?></span></div>
@@ -64,32 +64,31 @@
     <?php if($row_detail['diachi'] != '') { ?>
       <div class="li"><b>Địa chỉ:</b><?=$row_detail['diachi']?></span></div>
     <?php } ?>
-    <?php if($row_detail['vitri'] != '') { ?>
-      <div class="li"><b>Giá:</b><?=$row_detail['vitri']?></span></div>
-    <?php } ?>
     <?php if($row_detail['dientich'] != '') { ?>
-      <div class="li"><b>Diện tích:</b><?=$row_detail['dientich']?></span></div>
+      <div class="li"><b><i class="fas fa-check"></i></b><?=$row_detail['dientich']?></span></div>
     <?php } ?>
     <?php if($row_detail['mattien'] != '') { ?>
-      <div class="li"><b>Phòng ngủ:</b><?=$row_detail['mattien']?></span></div>
+      <div class="li"><b><i class="fas fa-check"></i></b><?=$row_detail['mattien']?></span></div>
     <?php } ?>
-    <?php if($row_detail['dientich'] != '') { ?>
-      <div class="li"><b>Quận Huyện:</b><?=$get_dist["ten"]?></span></div>
+    <?php if($row_detail['vitri'] != '') { ?>
+      <div class="li"><b><i class="fas fa-check"></i></b><?=$row_detail['vitri']?></span></div>
     <?php } ?>
+   <?php /* 
     <div class="price-panel">
-          <div class="gia <?php if($row_detail['giakm'] > 0)echo 'giacu'; ?> li"><?=_gia?>: 
-            <?php if($row_detail['gia'] > 0)echo number_format($row_detail['gia'],0, ',', '.').'  vnđ';
-            else echo _lienhe; ?>
-          </div>
-          <?php if($row_detail['giakm'] > 0) { ?>
-            <div class="giakm li">
-              <?=_giakm?>: <?=number_format($row_detail['giakm'],0, ',', '.').' vnđ';?>
-              <span class="tinh_phantram">
-                -<?=tinh_phantram($row_detail['gia'],$row_detail['giakm']);?>%
-              </span>
-            </div>
-          <?php } ?>
-        </div> 
+             <div class="gia <?php if($row_detail['giakm'] > 0)echo 'giacu'; ?> li"><?=_gia?>: 
+               <?php if($row_detail['gia'] > 0)echo number_format($row_detail['gia'],0, ',', '.').'  vnđ';
+               else echo _lienhe; ?>
+             </div>
+             <?php if($row_detail['giakm'] > 0) { ?>
+               <div class="giakm li">
+                 <?=_giakm?>: <?=number_format($row_detail['giakm'],0, ',', '.').' vnđ';?>
+                 <span class="tinh_phantram">
+                   -<?=tinh_phantram($row_detail['gia'],$row_detail['giakm']);?>%
+                 </span>
+               </div>
+             <?php } ?>
+           </div>  
+   */?>
     <?php /* 
     */?>
     <?php /* <?php if($row_detail['size'] != '') { ?> <div class="li"><b><?=_chonsize?>:</b> 
@@ -133,12 +132,12 @@
     <?php } ?>
 <?php /* 
 <div class="li"><b><?=_luotxem?>:</b> <span><?=$row_detail['luotxem']?></span></div> 
-*/?>
 <div class="li"><b><?=_soluong?>:</b> <input type="number" value="1" class="soluong" /></div>   
 <div class="li d-flex flex-wrap justify-content-between">
   <a class="dathang nutdathang" 
   data-id="<?=$row_detail['id']?>">Thêm vào giỏ</a> 
   <a class="muangay nutdathang" data-id="<?=$row_detail['id']?>">Đặt mua ngay</a></div>
+*/?>
 <?php /*  <div class="li"><div class="danhgiasao" data-url="<?=getCurrentPageURL();?>">
 <?php for($i=1;$i<=5;$i++) { ?><span data-value="<?=$i?>" data-id="<?=$row_detail["id"]?>"></span>
 <?php } ?>&nbsp;&nbsp;<b class="num_danhgia"><?=$num_danhgiasao?>/5</b></div> </div> */?>

@@ -43,15 +43,15 @@ $font-title             : $font-montserrat;
 $font-text              : $font-montserrat;
 $font-awesome           : 'Font Awesome 5 Free';
 $font-second            : 'Arial';
-$product-ratio          : percentage(4/6);
-$product-gutter         : percentage(20/$max-width);
+$product-ratio          : percentage(6/6);
+$product-gutter         : percentage(30/$max-width);
 $theme-color            : #004a9e;
 $theme2-color           : #ffc708;
 $map-height             : 410 * 1px;
 /* ======================== HEADER ======================== */
 $header_top-bg          : #f9f9f9;
 $header-bg              : #fff;
-$breadcrumb-bg          : #f7f6f6;
+$breadcrumb-bg          : transparent;
 /* ======================== MENU ======================== */
 $font-menu              : $font-montserrat;
 $menu_item_hover-color  : #004a9e;

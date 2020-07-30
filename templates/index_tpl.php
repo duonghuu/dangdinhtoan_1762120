@@ -58,10 +58,12 @@
     <a href="<?= $v["link"] ?>" class="quangcao-item__url">
       <figure class="quangcao-item__figure" style="background-image: url('<?= $img ?>')"></figure>
       <div class="quangcao-item__info">
-        <div class="quangcao-item__info--inner">
+        <div class="container">
+        <div class=" quangcao-item__info--inner">
           <h3 class="quangcao-item__name"><?= $v["ten"] ?></h3>
           <p class="quangcao-item__desc"><?= $v["mota"] ?></p>
-          <span class="readmore-btn">Xem thêm <i class="fas fa-home"></i></span>
+          <span class="readmore-btn readmore-btn--white">Xem thêm <i class="fas fa-home"></i></span>
+        </div>
         </div>
       </div>
     </a>
@@ -167,7 +169,12 @@
       <?php foreach($quangcao2 as $k=>$v) {
         $img = _upload_hinhanh_l.$v["thumb"];
        ?>
-      <a href="<?= $v["link"] ?>" class="quangcao-item" style="background-image: url('<?= $img ?>')"></a>
+      <div class="quangcao2-item" >
+      <a href="<?= $v["link"] ?>" class="quangcao2-item__url" >
+          <figure class="quangcao2-item__figure" 
+          style="background-image: url('<?= $img ?>')"></figure>
+      </a>
+    </div>
       <?php } ?>
     </div>
   </div>

@@ -17,7 +17,7 @@ Về Cena</a>
  </li> 
  <li class="<?php if($com=='y-tuong') echo 'active'; ?>"><a href="y-tuong.html">
  Ý tưởng</a></li>
- <li class="<?php if($com=='truyen-thong') echo 'active'; ?>"><a href="truyen-thong.html">
+ <li class="<?php if($com=='tin-tuc') echo 'active'; ?>"><a href="tin-tuc.html">
  Truyền thông</a></li>
  <li class="<?php if($com=='tim-cua-hang') echo 'active'; ?>"><a href="tim-cua-hang.html">
  Tìm cửa hàng</a></li>
